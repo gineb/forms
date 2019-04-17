@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Merienda|Montserrat:400,700" rel="stylesheet">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Feedback</h1>
+  </header>
+  <form id="survey-form" action="">
+    <p id="description">Let us know how we can improve our services.</p>
+    <br>
+    <p class="required-sym">(*Required)</p>
+    <fieldset id="user-profile">
+      <legend>Profile</legend>
+      <div class="label-reverse">
+        <input type="text" id="name" name="first-name" placeholder="type your last name" autofocus required>
+        <label for="fname" id="name-label">First Name</label>
+      </div>
+      <div class="label-reverse">
+        <input type="text" id="lname" name="last-name" placeholder="type your last name" required>
+        <label for="lname" id="lname-label">Last Name</label>
+      </div>
+      <div class="label-reverse">
+        <input type="email" id="email" name="email" placeholder="type your email" value="" required>
+        <label for="email" id="email-label">Email</label>
+      </div>
+      <div class="label-reverse">
+        <input type="number" id="number" name="age" placeholder="select or type your age" min="13" max="70" required>
+        <label for="number" id="number-label">Age</label>
+      </div>
+    </fieldset>
+    <!--drop down current role-->
+    <fieldset id="select-role">
+      <legend>Which option best describes your current role?</legend>
+      <select class="dropdown" id="dropdown">
+        <option disabled value>Select an option</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </fieldset>
+    <!--roles drop down label-->
+
+    <!--radio buttons-->
+    <fieldset id="radio-buttons">
+      <legend>Would you recommend our services to a friend?</legend>
+      <div>
+        <span class="required-sym">*</span>
+        <label for="rbtn-definitely">
+          <input id="rbtn-definitely" type="radio" name="rating" value="definitely" required>
+          Definitely</label>
+
+        <label for="rbtn-maybe">
+          <input id="rbtn-maybe" type="radio" name="rating" value="maybe" required>
+          Maybe</label>
+
+        <label for="rbtn-notsure">
+          <input id="rbtn-notsure" type="radio" name="rating" value="notsure" required>
+          Not Sure</label>
+      </div>
+    </fieldset>
+
+    <!--drop down-->
+    <fieldset id="select-study">
+      <legend>Which areas of study do you like most?</legend>
+      <select class="dropdown" id="dropdown-study" name="dropdown">
+        <option disabled selected value>Select an option</option>
+        <option>Challenges</option>
+        <option>Projects</option>
+        <option>Community</option>
+        <option>Open Source</option>
+      </select>
+    </fieldset>
+    <!-- checkbox -->
+    <fieldset id="chk-boxes">
+      <legend>What can we improve on in the future (check all that apply).</legend>
+
+      <label for="chk-frontend">
+        <input id="chk-frontend" type="checkbox" name="front-end" value="frontend-projects">Front-end Projects
+      </label>
+      <label for="chk-backend">
+        <input id="chk-backend" type="checkbox" name="back-end" value="backend-projects">Back-end Projects
+      </label>
+      <label for="chk-datavisualization">
+        <input id="chk-datavisualization" type="checkbox" name="visualization" value="data-visualization">Data
+        Visualization
+      </label>
+      <label for="chk-challenges">
+        <input id="chk-challenges" type="checkbox" name="challenges" value="challenges">Challenges
+      </label>
+      <label for="chk-opensource">
+        <input id="chk-opensource" type="checkbox" name="open-source" value="open-source">Open Source Community
+      </label>
+      <label for="chk-gitter">
+        <input id="chk-gitter" type="checkbox" name="gitter" value="gitter">Gitter help rooms
+      </label>
+      <label for="chk-videos">
+        <input id="chk-videos" type="checkbox" name="videos" value="videos">Videos
+      </label>
+      <label for="chk-meetups">
+        <input id="chk-meetups" type="checkbox" name="meetups" value="meetups">City Meetups
+      </label>
+      <label for="chk-wiki">
+        <input id="chk-wike" type="checkbox" name="wiki" value="wiki">Wiki
+      </label>
+      <label for="chk-forum">
+        <input id="chk-forum" type="checkbox" name="forum" value="forum">Forum
+      </label>
+      <label for="chk-courses">
+        <input id="chk-courses" type="checkbox" name="courses" value="additional-courses">Additional Courses
+      </label>
+    </fieldset>
+
+    <!--textarea -->
+    <fieldset>
+      <legend>Any Comments or Suggestions?</legend>
+      <textarea id="comments" rows="8" cols="9" name="comment" placeholder="Enter your comment here..."></textarea>
+    </fieldset>
+
+    <button id="submit" type="submit">Submit</button>
+
+  </form>
+</body>

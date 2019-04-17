@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  background-color: black;
+  /*   background-image: linear-gradient(to bottom right, green, yellow); */
+}
+
+header {
+  position: fixed;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  /*   border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%; */
+  /*   border-radius: 20%; */
+}
+header h1#title {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translatex(-50%);
+  text-align: center;
+  font-size: 3.2em;
+  color: green;
+}
+
+form {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translatex(-50%);
+  background-image: linear-gradient(to top right, lightgreen, lightyellow);
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 30px;
+  color: green;
+  text-align: left;
+}
+form #description {
+  text-align: center;
+}
+fieldset {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/*=== All required elements ===*/
+/* :required {
+  color: red !important;
+} */
+/* Target the <label> of all elements with the required property add append a required indicator. This works as long as the <label> element comes after the <input> element */
+:required + label::before {
+  content: "* ";
+  color: red !important;
+  font-size: 0.8em;
+  font-weight: bold !important;
+}
+.required-sym {
+  color: red;
+  text-align: center;
+}
+/*==============
+The HTML markup order is <input> then <label> - this is needed for the (:required + label::after) to work. 
+
+Use flexbox to reverse the order of the label and input elements 
+===============*/
+#user-profile .label-reverse {
+/*   display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;
+/*   -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse; */
+  flex-direction: column-reverse;
+}
+
+label {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  font-family: 'Merienda', sans-serif;
+  font-size: 1.2em;
+  color: green;
+  padding: 5px;
+  border: 0.1px solid;
+}
+
+#radio-buttons input,
+#chk-boxes input {
+  width: 18px;
+  height: 20px;
+  /*   margin-right: 5px; */
+}
+
+/* Arrange checkboxes in a column */
+#chk-boxes label {
+  display: block;
+}
+/* #checkBoxes input{
+  margin-right: 5px;
+  width: 18px;
+  height: 20px;
+} */
+
+/* Override bold font */
+#radio-buttons label,
+#chk-boxes label {
+  font-weight: normal;
+  padding: 0;
+  line-height: 30px;
+}
+textarea {
+  width: 100%;
+}
+
+button {
+  background-color: green;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 7px;
+}
+button:hover {
+  border: 1px solid yellow;
+  box-shadow: 5px 5px 8px yellow;
+}
+
